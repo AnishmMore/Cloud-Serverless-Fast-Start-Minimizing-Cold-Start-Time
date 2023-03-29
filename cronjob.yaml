@@ -1,0 +1,32 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: ping
+spec:
+  schedule: "*/3 * * * *"
+  concurrencyPolicy: Forbid
+  
+  successfulJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          annotations:
+            sidecar.istio.io/inject: "false"
+          labels:
+            app: cronjob
+        spec:
+          containers:
+          - name: ping
+            image: buildpack-deps:curl
+            imagePullPolicy: IfNotPresent
+            command:
+              - /bin/sh
+              - -ec
+              - curl -sS http://quarkus-getting-started.default.34.121.210.234.sslip.io/hello
+            #lifecycle:
+            # postStart:
+             #   exec:
+              #    command: ["/bin/sh", "-c", "if [ $(kubectl get jobs -l='job-name=ping' --field-selector status.succeeded=true --output=json | jq '.items | length') -eq 3 ]; then kubectl patch cronjob ping -p '{\"spec\":{\"suspend\":true}}'; fi"]
+          restartPolicy: OnFailure
+  suspend: false

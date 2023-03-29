@@ -1,0 +1,25 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: hello
+  annotations:
+    # Set the terminationGracePeriodSeconds to 60 seconds
+    # to allow the container to gracefully terminate
+    knative/serving.terminationGracePeriodSeconds: "200"
+spec:
+  template:
+    metadata:
+      annotations:
+        # Set the minimum and maximum number of replicas for the service.
+        autoscaling.knative.dev/minScale: "0"
+        autoscaling.knative.dev/maxScale: "6"
+        autoscaling.knative.dev/activation-scale: "2"
+    spec:
+      containers:
+        - image: gcr.io/knative-samples/simple-api
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: TARGET
+              value: "Serverless Application"

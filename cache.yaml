@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: simple-api-cache
+spec:
+  selector:
+    matchLabels:
+      app: simple-api-cache
+  template:
+    metadata:
+      labels:
+        app: simple-api-cache
+    spec:
+      containers:
+      - name: simple-api-cache
+        image: nheidloff/quarkus-getting-started-jvm-j9
+       # imagePullPolicy: IfNotPresent
