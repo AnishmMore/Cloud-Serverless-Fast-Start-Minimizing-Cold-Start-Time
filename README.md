@@ -84,6 +84,13 @@
 <p>Using the methods described in this repository, we were able to significantly minimize the cold start time for our Knative services. Here are some of the results we achieved:</p>
 <ul>
   <li>Method 1 - Container Startup Time Reduction: We were able to reduce the container startup time by up to 90% by optimizing the container image size and using the init container approach.</li>
+  <li> Simple-api image of size 3 MB: </li>
+<img width="634" alt="1" src="https://user-images.githubusercontent.com/57623274/228665997-a9db3d78-b7d2-457b-84d5-73a0229689ba.png">
+<li> Java image of size 35 MB: </li>
+<img width="1214" alt="2" src="https://user-images.githubusercontent.com/57623274/228666056-73388881-c53e-4efd-8154-56e7afcadcff.png">
+<li>Method 2 - Image Caching: We were able to reduce the image layer pull time by up to 50% using image caching.</li>
+<img width="1247" alt="Screenshot 2023-03-29 at 2 04 49 PM" src="https://user-images.githubusercontent.com/57623274/228667172-feb86435-5950-4173-87c5-4e1515168f0f.png">
+</ul>
 
 <h2>Team Members and Contributors</h2>
 <ul>
