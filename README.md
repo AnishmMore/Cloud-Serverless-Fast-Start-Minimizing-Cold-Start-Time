@@ -80,6 +80,11 @@
 </ol>
 <p>By following these steps, you can run the <code>pba.py</code> script and implement SARIMA time series forecasting to minimize cold start time for your Knative service. This approach can help ensure that your service is always available and performs optimally for your users.</p>
 
+<h2>Results</h2>
+<p>Using the methods described in this repository, we were able to significantly minimize the cold start time for our Knative services. Here are some of the results we achieved:</p>
+<ul>
+  <li>Method 1 - Container Startup Time Reduction: We were able to reduce the container startup time by up to 90% by optimizing the container image size and using the init container approach.</li>
+
 <h2>Team Members and Contributors</h2>
 <ul>
   <li>Ajay Wayase</li>
