@@ -80,3 +80,11 @@
 </ol>
 <p>By following these steps, you can run the <code>pba.py</code> script and implement SARIMA time series forecasting to minimize cold start time for your Knative service. This approach can help ensure that your service is always available and performs optimally for your users.</p>
 
+<h2>Team Members and Contributors</h2>
+<ul>
+  <li>Ajay Wayase</li>
+  <li>Anish More</li>
+</ul>
+<p>We are grateful to all the contributors who have helped make this project possible. Thank you for your support and contributions!</p>
+<p>If you are interested in contributing to this project, please feel free to reach out to us or submit a pull request. We welcome your contributions and look forward to collaborating with you!</p>
+
