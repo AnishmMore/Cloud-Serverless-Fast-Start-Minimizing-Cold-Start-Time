@@ -65,6 +65,7 @@
   <li><code>pba.py</code>: This Python script uses the trained <code>arima_model.pkl</code> file to forecast traffic based on the current datetime and predict and deploy autoscaling pods to prepare our pods for incoming traffic. This approach helps mitigate the impact of cold start in a graceful manner.</li>
 </ul>
 <p>By using a time series forecasting approach and implementing the SARIMA model, you can predict future traffic for your Knative service and take proactive steps to prepare your pods for incoming traffic. This approach can help ensure that your service is always available and performs optimally for your users.</p>
+<p> Reference: A. P. Jegannathan, R. Saha and S. K. Addya, "A Time Series Forecasting Approach to Minimize Cold Start Time in Cloud-Serverless Platform," 2022 IEEE International Black Sea Conference on Communications and Networking (BlackSeaCom), Sofia, Bulgaria, 2022, pp. 325-330, doi: 10.1109/BlackSeaCom54372.2022.9858271. <p>
 
 <h2>Steps to Implement SARIMA Time Series Forecasting for Minimizing Cold Start Time</h2>
 <p>Here are the steps to run the <code>pba.py</code> script for implementing SARIMA time series forecasting to minimize cold start time:</p>
