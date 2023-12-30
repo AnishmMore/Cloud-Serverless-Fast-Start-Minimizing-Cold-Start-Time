@@ -95,8 +95,8 @@
 
 <h2>Team Members and Contributors</h2>
 <ul>
-  <li>Ajay Wayase</li>
   <li>Anish More</li>
+  <li>Ajay Wayase</li>
 </ul>
 <p>We are grateful to all the contributors who have helped make this project possible. Thank you for your support and contributions!</p>
 <p>If you are interested in contributing to this project, please feel free to reach out to us or submit a pull request. We welcome your contributions and look forward to collaborating with you!!</p>
